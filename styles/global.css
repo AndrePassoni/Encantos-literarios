@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --pink-light: #C59DD2;
     --pink-base: #9547A5;
@@ -34,6 +40,8 @@
 body {
     background-color: var(--pink-low);
     color: var(--text-body);
+    overflow-x: hidden;
+    zoom: .6;
 }
 
 h1 {
