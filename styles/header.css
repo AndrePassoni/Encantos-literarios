@@ -10,7 +10,6 @@
     }
 
     & button {
-        /* appearance: none; */
         background-color: var(--pink-dark);
         color: var(--text-title);
         padding-inline: 1.25rem;
