@@ -29,6 +29,38 @@
     font: var(--button);
 }
 
+.btn-effect {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background-color: var(--bg-color, var(--pink-dark));
+    transition: background-color 0.3s;
+
+    & span {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 350%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: var(--hover-color, var(--pink-base));
+
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 1s ease;
+        z-index: 1;
+    }
+}
+
+.btn-effect:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
 .tag {
     font: var(--tag);
     text-transform: uppercase;

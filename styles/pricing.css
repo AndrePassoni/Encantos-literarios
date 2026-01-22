@@ -1,5 +1,10 @@
 section.pricing {
     /* background-color: var(--shape-base); */
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    max-width: 20rem;
+    margin-inline: auto;
     & .pricing-title {
         display: flex;
         flex-direction: column;
@@ -10,14 +15,42 @@ section.pricing {
     }
 
     & .prices {
-        
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+
         margin-block: 9rem;
+        max-width: 18rem;
+
+        &:hover .semester:not(:hover) {
+            background-color: var(--shape-base);
+            border: 2px solid var(--shape-stroke);
+        }
 
         & h3 {
             margin-bottom: 1.5rem;
+        }
+
+        & .heading-semester {
+            & img {
+                position: absolute;
+                top: -12.5%;
+            }
+
+            & span {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                max-height: 1.875rem;
+                height: 100%;
+                background-color: var(--shape-stroke);
+                color: var(--text-title);
+                padding: 9px 1.25rem;
+                border-radius: 999px;
+                right: 7%;
+                top: 6%;
+            }
         }
 
         & span.title-sm {
@@ -36,24 +69,17 @@ section.pricing {
             border: none;
             border-radius: 0.5rem;
             transition: 600ms;
-
-            &:hover {
-                cursor: pointer;
-            }
+            cursor: pointer;
         }
 
         & .btn-blue {
-            background-color: var(--blue-dark);
-            &:hover {
-                background-color: var(--blue-light);
-            }
+            --bg-color: var(--blue-dark);
+            --hover-color: var(--blue-mid);
         }
 
         & .btn-purple {
-            background-color: var(--pink-dark);
-            &:hover {
-                background-color: var(--pink-light);
-            }
+            --bg-color: var(--pink-dark);
+            --hover-color: var(--pink-base);
         }
     }
 
@@ -68,9 +94,9 @@ section.pricing {
         justify-content: center;
         padding: 2rem 2rem 1.75rem 2rem;
         border-radius: 1.5rem;
-        border: 1px solid var(--shape-stroke);
+        border: 2px solid var(--shape-stroke);
         rotate: -8deg;
-        left: 21rem;
+        left: -100%;
         z-index: 1;
         transition: 600ms;
 
@@ -91,17 +117,30 @@ section.pricing {
             }
         }
 
+        & .out-stars {
+            & img:nth-child(1) {
+                width: 4.5rem;
+                height: 4.5rem;
+                position: absolute;
+                top: -12%;
+                left: -16%;
+            }
+
+            & img:nth-child(2) {
+                position: absolute;
+                width: 2.5rem;
+                height: 2.5rem;
+                top: 0;
+                left: -16%;
+            }
+        }
+
         &:hover {
             background-color: var(--shape-hover);
-            border: 1px solid var(--shape-hover);
+            border: 2px solid var(--shape-hover);
             z-index: 3;
             transform: translateY(-10px);
             box-shadow: 0 0 150px 0 var(--blue-dark);
-            &
-            .semester {
-                background-color: var(--shape-base);
-                border: 1px solid var(--shape-stroke);
-            }
         }
     }
 
@@ -117,7 +156,7 @@ section.pricing {
         justify-content: center;
         padding: 2rem 2rem 1.75rem;
         border-radius: 1.5rem;
-        border: 1px solid var(--shape-hover);
+        border: 2px solid var(--shape-hover);
         bottom: 3rem;
         z-index: 2;
         transition: 600ms;
@@ -141,7 +180,7 @@ section.pricing {
 
         &:hover {
             background-color: var(--shape-hover);
-            border: 1px solid var(--shape-hover);
+            border: 2px solid var(--shape-hover);
             z-index: 3;
             transform: translateY(-10px);
             box-shadow: 0 0 150px 0 var(--blue-dark);
@@ -159,9 +198,9 @@ section.pricing {
         justify-content: center;
         padding: 2rem 2rem 1.75rem;
         border-radius: 1.5rem;
-        border: 1px solid var(--shape-stroke);
+        border: 2px solid var(--shape-stroke);
         rotate: 8deg;
-        right: 21rem;
+        right: -100%;
         z-index: 1;
         transition: 600ms;
 
@@ -179,6 +218,24 @@ section.pricing {
             & li {
                 display: flex;
                 align-items: center;
+            }
+        }
+
+        & .out-stars {
+            & img:nth-child(1) {
+                width: 4.5rem;
+                height: 4.5rem;
+                position: absolute;
+                bottom: -10%;
+                right: -22%;
+            }
+
+            & img:nth-child(2) {
+                position: absolute;
+                width: 2.5rem;
+                height: 2.5rem;
+                bottom: -9%;
+                right: -2%;
             }
         }
 

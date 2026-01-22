@@ -1,4 +1,7 @@
 section.kit {
+    display: grid;
+    align-content: center;
+    justify-content: center;
     & .kit-header {
         display: flex;
         flex-direction: column;
@@ -20,8 +23,9 @@ section.kit {
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         padding-top: 8.375rem;
+        max-width: 28rem;
         height: 57.5rem;
 
         & img:nth-child(1) {
@@ -37,8 +41,8 @@ section.kit {
             max-height: 33.5rem;
             height: 100%;
             rotate: 12deg;
-            right: 26.5rem;
-            top: 9rem;
+            right: -26%;
+            bottom: 26%;
             z-index: -1;
         }
 
@@ -49,8 +53,8 @@ section.kit {
             max-height: 33.5rem;
             height: 100%;
             rotate: 22deg;
+            right: -48%;
             z-index: -2;
-            right: 20.5rem;
         }
 
         & img:nth-child(4) {
@@ -60,9 +64,9 @@ section.kit {
             max-height: 16rem;
             height: 100%;
             rotate: -8deg;
+            left: -32%;
+            bottom: 0;
             z-index: -1;
-            left: 25rem;
-            bottom: 1rem;
         }
 
         & img:nth-child(5) {
@@ -71,9 +75,9 @@ section.kit {
             width: 100%;
             max-height: 8rem;
             height: 100%;
+            left: -42%;
+            bottom: 22%;
             z-index: -3;
-            left: 22rem;
-            bottom: 14rem;
         }
 
         & img:nth-child(6) {
@@ -82,9 +86,9 @@ section.kit {
             width: 100%;
             max-height: 1.875rem;
             height: 100%;
+            left: -30%;
+            top: 23%;
             z-index: -3;
-            left: 25.5rem;
-            top: 13.5rem;
         }
 
         & img:nth-child(7) {
@@ -94,8 +98,29 @@ section.kit {
             max-height: 9.5rem;
             height: 100%;
             z-index: -3;
-            right: 24.5rem;
+            right: -32%;
             bottom: 0;
+        }
+
+        & span:nth-child(8) {
+            position: absolute;
+            z-index: -4;
+            left: -46%;
+            top: 19%;
+        }
+
+        & span:nth-child(9) {
+            position: absolute;
+            z-index: -4;
+            left: -46%;
+            bottom: 37%;
+        }
+
+        & span:nth-child(10) {
+            position: absolute;
+            z-index: -4;
+            right: -22%;
+            bottom: -3%;
         }
     }
 }

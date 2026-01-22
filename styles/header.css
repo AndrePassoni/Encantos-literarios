@@ -10,15 +10,14 @@
     }
 
     & button {
-        background-color: var(--pink-dark);
+        --bg-color: var(--pink-dark);
+        --hover-color: var(--pink-base);
+
         color: var(--text-title);
         padding-inline: 1.25rem;
         padding-block: 0.75rem;
         border: none;
         border-radius: 0.5rem;
-
-        &:hover {
-            cursor: pointer;
-        }
+        cursor: pointer;
     }
 }
