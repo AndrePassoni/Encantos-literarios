@@ -66,3 +66,8 @@
     text-transform: uppercase;
     line-height: 0.05em;
 }
+
+.link {
+    font: var(--link);
+    color: var(--blue-light);
+}
