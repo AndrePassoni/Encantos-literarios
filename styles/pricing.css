@@ -118,11 +118,15 @@ section.pricing {
         }
 
         & .out-stars {
+            & img {
+                transition: transform 600ms, rotate 600ms;
+            }
+
             & img:nth-child(1) {
                 width: 4.5rem;
                 height: 4.5rem;
                 position: absolute;
-                top: -12%;
+                top: -13%;
                 left: -16%;
             }
 
@@ -130,8 +134,19 @@ section.pricing {
                 position: absolute;
                 width: 2.5rem;
                 height: 2.5rem;
-                top: 0;
-                left: -16%;
+                top: -2%;
+                left: -17%;
+            }
+        }
+
+        &:hover .out-stars img {
+            transform: translateY(5px);
+            &:nth-child(1) {
+                rotate: -20deg;
+            }
+
+            &:nth-child(2) {
+                rotate: 20deg;
             }
         }
 
@@ -139,7 +154,7 @@ section.pricing {
             background-color: var(--shape-hover);
             border: 2px solid var(--shape-hover);
             z-index: 3;
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: 0 0 150px 0 var(--blue-dark);
         }
     }
@@ -222,6 +237,10 @@ section.pricing {
         }
 
         & .out-stars {
+            & img {
+                transition: transform 600ms, rotate 600ms;
+            }
+
             & img:nth-child(1) {
                 width: 4.5rem;
                 height: 4.5rem;
@@ -239,11 +258,22 @@ section.pricing {
             }
         }
 
+        &:hover .out-stars img {
+            transform: translateY(5px);
+            &:nth-child(1) {
+                rotate: 20deg;
+            }
+
+            &:nth-child(2) {
+                rotate: -20deg;
+            }
+        }
+
         &:hover {
             background-color: var(--shape-hover);
             border: 1px solid var(--shape-hover);
             z-index: 3;
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: 0 0 150px 0 var(--blue-dark);
         }
     }
